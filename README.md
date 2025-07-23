@@ -1,12 +1,35 @@
-# React + Vite
+# 🎨 Background Changer App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React project that allows users to dynamically change the background color of the entire webpage by clicking buttons.
 
-Currently, two official plugins are available:
+## 🚀 Features
+- Interactive buttons to change background color
+- Uses `useState` to manage color state
+- `useEffect` ensures the background updates with each color change
+- Clean and minimal interface for testing and learning React hooks
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
+- React (Functional Components)
+- Hooks: `useState`, `useEffect`
+- JavaScript, HTML, CSS
 
-## Expanding the ESLint configuration
+## 💡 How It Works
+- The app maintains a `color` state using React's `useState`.
+- When a user clicks a button, the `color` state is updated.
+- The `useEffect` hook listens for changes in the `color` state (included in its dependency array).
+- Whenever `color` changes, the background of the `document.body` updates to match the new color.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```jsx
+useEffect(() => {
+  document.body.style.backgroundColor = color;
+}, [color]);
+```
+
+## 🖱️ Usage
+Just click on one of the buttons labeled with color names, and watch the background change accordingly!
+
+## 🧑‍💻 Author
+Your Name – Pranav Joshi
+
+## 📄 License
+This project is licensed under the MIT License.
