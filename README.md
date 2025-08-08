@@ -31,5 +31,3 @@ Just click on one of the buttons labeled with color names, and watch the backgro
 ## 🧑‍💻 Author
 Your Name – Pranav Joshi
 
-## 📄 License
-This project is licensed under the MIT License.
